@@ -4,7 +4,7 @@
   * Sign-in
       * Create account 
       * Forgot username/password
-  * Navigation
+  * Navigation  (Samish Kavoori)
       * Settings
       * Mission statement
   * Main page
