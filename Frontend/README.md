@@ -1,14 +1,14 @@
 # Frontend Progress
 
 ## Pages:
-  * Sign-in
+  * Sign-in (Sidhartha Babu)
       * Create account 
       * Forgot username/password
   * Navigation  (Samish Kavoori)
       * Settings
       * Mission statement
-  * Main page
-  * Cart/payment (Alexander Hom)
-  * Confirmation 
-  * Order history/tracking
-  * Confirmation page
+  * Main page (Jet)
+  * Cart/payment (Alexander Hom) (?)
+  * Order Confirmation (Paulo)
+  * Order history/tracking (Alexander Horn)
+  * Email Confirmation page (Paulo)
