@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Order Confirmation</title>
+    </head>
+
+    <body>
+        <h1>Thank you for your order!</h1>
+        <hr />
+
+        <h2 id ="eta">ETA = ____</h2>
+        <h2 id="location">Delivery Location = _____</h2>
+        <h2>Order Summary</h2>
+        <!--Cart Details here (should be the same as the orderpage-->
+        <h3 id = "totalVal">Total: $__</h3>
+
+        <img src = "logo.png" alt = "Unable to load logo.">
+
+        <!--Firebase-->
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+              apiKey: "",
+              authDomain: "ucmroboticsfoodrobot.firebaseapp.com",
+              databaseURL: "https://ucmroboticsfoodrobot.firebaseio.com",
+              projectId: "ucmroboticsfoodrobot",
+              storageBucket: "ucmroboticsfoodrobot.appspot.com",
+              messagingSenderId: "503157735593",
+              appId: "1:503157735593:web:0161305286f5636114e9b8",
+              measurementId: "G-1SHQ20SNTN"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            const db = firebase.firestore();
+            db.settings({ timestampsInSnapshots: true });
+            
+      
+      
+          </script>
+          <!--Calls on the respective js file-->
+          <script src="../../BackEnd/orderpage.js"></script>
+    </body>
+</html>
