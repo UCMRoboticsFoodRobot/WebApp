@@ -1,0 +1,19 @@
+body {
+  background-color: blue;
+  font-family: Helvetica;
+}
+
+
+button {
+  background-color: lightblue;
+  border: none;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px 24px;
+  border-radius: 8px;
+}
+
+div {
+  text-align: center;
+}

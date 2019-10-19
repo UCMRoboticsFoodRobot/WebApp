@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+  
+     <!--imports firestore-->
+     <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-firestore.js"></script>
+      
+    <title> Your Order </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+
+  <body>
+
+    <h1 style = "text-align: center;">Order Details</h1>
+
+    <h2>Your Cart</h2>
+    <hr />
+
+    <h2>Order Summary</h2>
+    <hr />
+
+    <br><br><strong id="subtotalVal">Subtotal: $ </strong><br><br>
+
+    <strong id="taxesVal">Taxes: </strong><strong> %</strong><br><br>
+    
+    <strong id="transportVal">Transport Fee: $ </strong><br><br>
+    
+    <strong id="totalVal">Total: $ </strong><br><br>
+
+    <h2>Payment Method</h2>
+    <hr />
+
+    <br>
+
+    <button id = "venmo">Venmo</button>
+
+    <button id = "paypal">PayPal</button>
+
+    <br><br><br><button id = "placeOrder">Place Order</button>
+
+
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBliJ3qXi3KNfG2i6r1bSWI1wDPGnXtJFc",
+        authDomain: "ucmroboticsfoodrobot.firebaseapp.com",
+        databaseURL: "https://ucmroboticsfoodrobot.firebaseio.com",
+        projectId: "ucmroboticsfoodrobot",
+        storageBucket: "ucmroboticsfoodrobot.appspot.com",
+        messagingSenderId: "503157735593",
+        appId: "1:503157735593:web:0161305286f5636114e9b8",
+        measurementId: "G-1SHQ20SNTN"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+      db.settings({ timestampsInSnapshots: true });
+      
+
+
+    </script>
+    <!--Calls on the respective js file-->
+    <script src="../../BackEnd/orderpage.js"></script>
+
+  </body>
+
+</html>
