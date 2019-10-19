@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html>
@@ -11,41 +12,22 @@
    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-auth.js"></script>
 
+
+<h1>Sign-In Page</h1>
+<form id= "signIn-form"> 
+E-Mail: <input type ="email" id = "userEmail"><br>
+Password: <input type = "password" id = "userPassword"><br>
+<input type = "submit" value = "submit">
+
+</form>
+    
 <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
 
 
-
-
-<!-- The surrounding HTML is left untouched by FirebaseUI.
-     Your app may use that space for branding, controls and other customizations.-->
-     <h1>Welcome to My Awesome App</h1>
-     <div id="firebaseui-auth-container"></div>
-     <div id="loader">Loading...</div>
-
-
-    <script>
-      // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "yashISwearToGodIfYouPutTheAPIKeyAgain",
-        authDomain: "ucmroboticsfoodrobot.firebaseapp.com",
-        databaseURL: "https://ucmroboticsfoodrobot.firebaseio.com",
-        projectId: "ucmroboticsfoodrobot",
-        storageBucket: "ucmroboticsfoodrobot.appspot.com",
-        messagingSenderId: "503157735593",
-        appId: "1:503157735593:web:0161305286f5636114e9b8",
-        measurementId: "G-1SHQ20SNTN"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-      const db = firebase.firestore();
-      db.settings({ timestampsInSnapshots: true });
-
-
-
-    </script>
     <!--Calls on the respective js file-->
     <script src="../../BackEnd/signIn.js"></script>
-
+    
+   
   </body>
 
 </html>
