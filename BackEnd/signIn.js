@@ -1,7 +1,7 @@
 
  // Your web app's Firebase configuration
  var firebaseConfig = {
-  apiKey: "",
+  apiKey: "AIzaSyBliJ3qXi3KNfG2i6r1bSWI1wDPGnXtJFc",
   authDomain: "ucmroboticsfoodrobot.firebaseapp.com",
   databaseURL: "https://ucmroboticsfoodrobot.firebaseio.com",
   projectId: "ucmroboticsfoodrobot",
@@ -16,13 +16,13 @@ const db = firebase.firestore();
 db.settings({ timestampsInSnapshots: true });
 
 
-
-const form = document.querySelector('#signIn-form')
-
 //Sign up new users: 
-form.addEventListener('submit', (e) => {
-  var useremail = form.userEmail.value;
-  var userpassword = form.userPassword.value;
+const SignUpform = document.querySelector('#signUp-form')
+
+
+SignUpform.addEventListener('submit', (e) => {
+  var useremail = form.userEmailSignUp.value;
+  var userpassword = form.userPasswordSignUp.value;
   console.log(useremail)
   e.preventDefault();
 firebase.auth().createUserWithEmailAndPassword(useremail, userpassword).catch(function(error) {
@@ -34,3 +34,18 @@ firebase.auth().createUserWithEmailAndPassword(useremail, userpassword).catch(fu
 });
 
 
+//Sign in existing users:
+
+const SignInform = document.querySelector('#signIn-form')
+
+SignUpform.addEventListener('submit', (e) => {
+var useremail = form.userEmailSignIn.value;
+var userPassword = form.userPasswordSignIn.value;
+firebase.auth().signInWithEmailAndPassword(useremail, userpassword).catch(function(error) {
+  
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // ...
+})
+});
