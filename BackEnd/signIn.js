@@ -1,7 +1,7 @@
 
  // Your web app's Firebase configuration
  var firebaseConfig = {
-  apiKey: "",
+  apiKey: "AIzaSyBliJ3qXi3KNfG2i6r1bSWI1wDPGnXtJFc",
   authDomain: "ucmroboticsfoodrobot.firebaseapp.com",
   databaseURL: "https://ucmroboticsfoodrobot.firebaseio.com",
   projectId: "ucmroboticsfoodrobot",
@@ -16,32 +16,15 @@ const db = firebase.firestore();
 db.settings({ timestampsInSnapshots: true });
 
 
-//Sign up new users: 
-const SignUpform = document.querySelector('#signUp-form')
-
-
-SignUpform.addEventListener('submit', (e) => {
-  var useremail = form.userEmailSignUp.value;
-  var userpassword = form.userPasswordSignUp.value;
-  console.log(useremail)
-  e.preventDefault();
-firebase.auth().createUserWithEmailAndPassword(useremail, userpassword).catch(function(error) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-  // ...
-})
-});
-
-
 //Sign in existing users:
 
 const SignInform = document.querySelector('#signIn-form')
 
-SignUpform.addEventListener('submit', (e) => {
-var useremail = form.userEmailSignIn.value;
-var userPassword = form.userPasswordSignIn.value;
-firebase.auth().signInWithEmailAndPassword(useremail, userpassword).catch(function(error) {
+SignInform.addEventListener('submit', (e) => {
+  e.preventDefault();
+var useremailSignIn = SignInform.userEmailSignIn.value;
+var userpasswordSignIn = SignInform.userPasswordSignIn.value;
+firebase.auth().signInWithEmailAndPassword(useremailSignIn, userpasswordSignIn).catch(function(error) {
 
   // Handle Errors here.
   var errorCode = error.code;
@@ -49,3 +32,22 @@ firebase.auth().signInWithEmailAndPassword(useremail, userpassword).catch(functi
   // ...
 })
 });
+
+//Check if user is signed in: 
+
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+   console.log('Signed In');
+    // ...
+  } else {
+    // User is signed out.
+    console.log('signed out');
+    // ...
+  }
+});
+
+function signOut(){
+firebase.auth().signOut();
+
+}
