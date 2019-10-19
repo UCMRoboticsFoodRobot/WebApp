@@ -1,7 +1,7 @@
 
  // Your web app's Firebase configuration
  var firebaseConfig = {
-  apiKey: "AIzaSyBliJ3qXi3KNfG2i6r1bSWI1wDPGnXtJFc",
+  apiKey: "",
   authDomain: "ucmroboticsfoodrobot.firebaseapp.com",
   databaseURL: "https://ucmroboticsfoodrobot.firebaseio.com",
   projectId: "ucmroboticsfoodrobot",
@@ -42,7 +42,7 @@ SignUpform.addEventListener('submit', (e) => {
 var useremail = form.userEmailSignIn.value;
 var userPassword = form.userPasswordSignIn.value;
 firebase.auth().signInWithEmailAndPassword(useremail, userpassword).catch(function(error) {
-  
+
   // Handle Errors here.
   var errorCode = error.code;
   var errorMessage = error.message;
