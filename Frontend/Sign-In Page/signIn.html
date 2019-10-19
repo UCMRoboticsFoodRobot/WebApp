@@ -1,33 +1,43 @@
-
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
 
-     <!--imports firestore-->
-     <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-firestore.js"></script>
+<head>
+  <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
 
-   <!--imports Firebase auth-->
-   <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-   <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-auth.js"></script>
+  <!--imports firestore-->
+  <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-firestore.js"></script>
 
-
-<h1>Sign-In Page</h1>
-<form id= "signIn-form"> 
-E-Mail: <input type ="email" id = "userEmail"><br>
-Password: <input type = "password" id = "userPassword"><br>
-<input type = "submit" value = "submit">
-
-</form>
-    
-<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+  <!--imports Firebase auth-->
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-auth.js"></script>
 
 
-    <!--Calls on the respective js file-->
-    <script src="../../BackEnd/signIn.js"></script>
-    
-   
+  <h1>Sign-in Page</h1>
+  <div>
+    <h2>Sign up</h2>
+    <form id="signUp-form">
+      E-Mail: <input type="email" id="userEmailSignUp"><br>
+      Password: <input type="password" id="userPasswordSignUp"><br>
+      <input type="submit" value="submit">
+    </form>
+
+  </div>
+
+  <div>
+    <h2>Sign-in</h2>
+    <form id="signIn-form">
+      E-Mail: <input type="email" id="userEmailSignIn"><br>
+      Password: <input type="password" id="userPasswordSignIn"><br>
+      <input type="submit" value="submit">
+    </form>
+  </div>
+
+
+  <!--Calls on the respective js file-->
+  <script src="../../BackEnd/signIn.js"></script>
+
+
   </body>
 
 </html>
