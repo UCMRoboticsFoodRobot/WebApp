@@ -13,25 +13,25 @@
   <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-auth.js"></script>
 
 
-  <h1>Sign-in Page</h1>
-  <div>
-    <h2>Sign up</h2>
-    <form id="signUp-form">
-      E-Mail: <input type="email" id="userEmailSignUp"><br>
-      Password: <input type="password" id="userPasswordSignUp"><br>
-      <input type="submit" value="submit">
-    </form>
-
-  </div>
+  
 
   <div>
     <h2>Sign-in</h2>
     <form id="signIn-form">
       E-Mail: <input type="email" id="userEmailSignIn"><br>
       Password: <input type="password" id="userPasswordSignIn"><br>
-      <input type="submit" value="submit">
+      <input type="submit" value = "submit">
     </form>
   </div>
+
+
+  
+  <div>
+  <h2>Sign out</h2>
+  <button id = "signOutButton" onclick=signOut()>Sign Out</button>
+  </div>
+
+
 
 
   <!--Calls on the respective js file-->
