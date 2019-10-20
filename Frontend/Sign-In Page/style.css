@@ -9,7 +9,7 @@ body:before
     content: '';
     position: absolute;
     top: 0;
-    Left: 0;
+    Left: -25%;
     width: 50%;
     height: 100%;
     background: #03a9f4;
@@ -26,4 +26,6 @@ body:before
     min-height: 400px;
     background: #fff;
     box-shadow: 0 15px 50px rgba(0,0,0,.5);
+    padding: 50px;
+    box-sizing: border-box;
 }
