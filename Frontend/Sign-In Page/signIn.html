@@ -3,10 +3,11 @@
 <html>
 <head>
   <title> Sign In</title>
-  <link rel = "stylesheet" type = "text/css" href = "style.csss">
+  <link rel = "stylesheet" type = "text/css" href = "style.css">
   
   <!-- imports font-awesome -->
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" 
+  integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 
   <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
@@ -24,11 +25,20 @@
 <body>
   <div class = "form">
     <form>
-      <h2> Sign In </h2>
-      <div class = "input-box">
-         
-          <input type  = "text" name = "" placeholder = "Username" required = ""></inputtype>
-      </div>
+        <h2> Sign In </h2>
+          <div class = "input-box">
+               <i class="fas fa-user" aria-hidden="true"></i>
+               <input type = "username" name = "" placeholder = "Username" required = ""></inputtype>
+          </div>
+          <div class = "input-box">
+              <i class="fas fa-user" aria-hidden="true"></i>
+              <input type = "password" name = "" placeholder = "Password" required = ""></inputtype>
+          </div>
+          <div class = "input-box">
+              <i class="fas fa-user" aria-hidden="true"></i>
+              <input type = "submit" name = "" value = "Login">
+          </div>
+            <a href= "#">Forgot Password</a>
     </form>
   </div>
      <!-- <div>
