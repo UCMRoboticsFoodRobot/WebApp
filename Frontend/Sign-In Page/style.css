@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+
+    /*Setting the background image of the main page:
+    Would recommend changing the images as you see fit */
+    background: url(images/MercedRoboticsPage.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* Splits the Screen into blue and white*/
+body:before 
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    Left: -25%;
+    width: 50%;
+    height: 100%;
+    background: #03a9f4;
+    opacity: 0.8;
+
+}
+.form 
+{
+    position: absolute;
+    top: 50%;
+    Left: 25%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    min-height: 400px;
+    background: #fff;
+    box-shadow: 0 15px 50px rgba(0,0,0,.5);
+    padding: 50px;
+    box-sizing: border-box;
+}
