@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 
 <html>
-
 <head>
+  <title> Sign In</title>
+  <link rel = "stylesheet" type = "text/css" href = "style.css">
+  
+  <!-- imports font-awesome -->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" 
+  integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
   <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
 
   <!--imports firestore-->
@@ -14,30 +21,50 @@
 
 
   
-
-  <div>
-    <h2>Sign-in</h2>
-    <form id="signIn-form">
-      E-Mail: <input type="email" id="userEmailSignIn"><br>
-      Password: <input type="password" id="userPasswordSignIn"><br>
-      <input type="submit" value = "submit">
+</head>
+<body>
+  <div class = "form">
+    <form>
+        <h2> Sign In </h2>
+          <div class = "input-box">
+               <i class="fas fa-user" aria-hidden="true"></i>
+               <input type = "username" name = "" placeholder = "Username" required = ""></inputtype>
+          </div>
+          <a href= "#">Forgot Username</a>
+          <div class = "input-box">
+              <i class="fas fa-user" aria-hidden="true"></i>
+              <input type = "password" name = "" placeholder = "Password" required = ""></inputtype>
+          </div>
+          <a href= "#">Forgot Password</a>
+          <div class = "input-box">
+              <i class="fas fa-user" aria-hidden="true"></i>
+              <input type = "submit" name = "" value = "Login">
+          </div>
+            
     </form>
   </div>
+     <!-- <div>
+      <h2>Sign-in</h2>
+      <form id="signIn-form">
+        E-Mail: <input type="email" id="userEmailSignIn"><br>
+        Password: <input type="password" id="userPasswordSignIn"><br>
+        <input type="submit" value = "submit">
+      </form>
+    </div>
 
 
-  
-  <div>
-  <h2>Sign out</h2>
-  <button id = "signOutButton" onclick=signOut()>Sign Out</button>
-  </div>
+    
+    <div>
+    <h2>Sign out</h2>
+    <button id = "signOutButton" onclick=signOut()>Sign Out</button>
+    </div> -->
 
 
 
 
-  <!--Calls on the respective js file-->
-  <script src="../../BackEnd/signIn.js"></script>
+    <!--Calls on the respective js file-->
+    <!-- <script src="../../BackEnd/signIn.js"></script>    -->
 
 
-  </body>
-
+</body>
 </html>
