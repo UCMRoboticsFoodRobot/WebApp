@@ -8,7 +8,7 @@
       * Settings
       * Mission statement
   * Main page (Jet)
-  * Cart/payment (Alexander Horn) (?)
+  * Cart/payment (Alexander Hom)
   * Order Confirmation (Paulo)
-  * Order history/tracking (Alexander Horn)
+  * Order history/tracking (Alexander Hom)
   * Email Confirmation page (Paulo)
