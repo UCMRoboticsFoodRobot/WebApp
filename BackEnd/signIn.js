@@ -1,7 +1,7 @@
 
  // Your web app's Firebase configuration
  var firebaseConfig = {
-  apiKey: "AIzaSyBliJ3qXi3KNfG2i6r1bSWI1wDPGnXtJFc",
+  apiKey: "AIzaSyA-p1zXRhGmSsA8ePtZO8Qbb3KVaUNh7TY ",
   authDomain: "ucmroboticsfoodrobot.firebaseapp.com",
   databaseURL: "https://ucmroboticsfoodrobot.firebaseio.com",
   projectId: "ucmroboticsfoodrobot",
