@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Order History and Tracking</title>
+  <link rel = "stylesheet" type = "text/css" href = "style.css">
+
+</head>
+
+
+<body>
+
+<h1 class = "orderHistory">
+  Order History
+</h1>
+
+<h2 class = "currentOrders">
+  Current Orders
+</h1>
+
+<p class = "orderInfo">
+  <div id = "orderNumber"> Order Number: </div>
+    <div id = "number">ABCDEF</div>
+  <div id = "statusDetails"> Status: </div>
+    <div id = "status"> Your order is currently on its way. ETA: About 5 minutes.</div>
+
+  <table>
+    <tr>
+      <th id = "item">Item</th>
+      <th>Quantity</th>
+      <th>Price</th>
+    </tr>
+    <tr>
+      <td>Doritos Nacho Cheese Flavored Tortilla Chips</td>
+      <td id = "quantityItemOne">1</td>
+      <td id = "priceItemOne">$1.99</td>
+    </tr>
+    <tr>
+      <td id>Gatorade Thirst Quencher Berry</td>
+      <td id = "quantityItemTwo">1</td>
+      <td id = "priceItemTwo">$1.99</td>
+    </tr>
+
+    </tr>
+
+
+
+  </table>
+
+  <button id = "changeOrder">Change or Cancel Order</button>
+  <button id = "receipt">View Receipt</button>
+
+
+
+</p>
+
+
+
+<h2 class = "previousOrders">
+  Previous Orders
+</h2>
+
+<div id = "sort">
+  Sort By
+  <select>
+    <option value = "mostRecent">Most Recent</option>
+    <option value = "highestPriceFirst">Price: High</option>
+    <option value = "lowestPriceFirst">Price: Low</option>
+  </select>
+</div>
+
+<table>
+  <tr>
+    <th id>Date Ordered</th>
+    <th id>Item</th>
+    <th id>Quantity</th>
+    <th id>Price</th>
+    <th id>Order Number</th>
+  <tr>
+  <tr>
+    <td id = "datePreviousItemOne">10-21-2019</td>
+    <td id = "previousItemOne">Doritos Nacho Cheese Flavored Tortilla Chips</td>
+    <td id = "quantityPreviousItemOne">2</td>
+    <td id = "pricePreviousItemOne">$1.99</td>
+    <td id = "orderNumberPreviousItemOne">ABCDEF</td>
+
+  <tr>
+    <tr>
+      <td id = "datePreviousItemTwo">10-21-2019</td>
+      <td id = "previousItemTwo">Gatorade Thirst Quencher Berry</td>
+      <td id = "quantityPreviousItemTwo">1</td>
+      <td id = "pricePreviousItemTwo">$1.99</td>
+      <td id = "orderNumberPreviousItemTwo">ABCDEF</td>
+
+    <tr>
+
+
+</table>
+
+
+
+</body>
+
+
+</html>

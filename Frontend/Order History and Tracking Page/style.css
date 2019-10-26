@@ -1,0 +1,95 @@
+.orderHistory {
+  font-family: Arial;
+  text-align: center;
+  color: #19D9FF;
+}
+
+.currentOrders {
+  font-family: Arial;
+  color: #19D9FF;
+}
+
+#orderNumber {
+  font-family: Arial;
+  font-weight: bold;
+  float: left;
+  padding-right: 10px;
+  padding-bottom: 20px;
+}
+
+#number {
+  font-family: Arial;
+  padding-bottom: 20px;
+}
+
+#statusDetails {
+  font-family: Arial;
+  font-weight: bold;
+  float: left;
+  padding-right: 10px;
+}
+
+#status {
+  font-family: Arial;
+  padding-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  font-family: Arial;
+  margin-bottom: 20px;
+}
+
+#item {
+  text-align: left;
+  padding-left: 20px;
+}
+
+th {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #dddddd;
+}
+td {
+  padding: 20px;
+  border-bottom: 1px solid #dddddd;
+}
+
+#quantityItemOne, #quantityItemTwo {
+  text-align: center;
+}
+
+#priceItemOne, #priceItemTwo {
+  text-align: center;
+}
+
+#changeOrder {
+  font-size: 16px;
+  font-weight:normal;
+  border: none;
+  border-radius: 8px;
+  background-color: #19D9FF;
+  padding: 10px 24px;
+  margin-right: 20px;
+  float: left;
+}
+
+#receipt {
+  font-size: 16px;
+  font-weight: normal;
+  border: none;
+  border-radius: 8px;
+  background-color: #19D9FF;
+  padding: 10px 24px
+
+}
+
+.previousOrders {
+  font-family: Arial;
+  color: #19D9FF;
+}
+
+#sort {
+  font-family: Arial;
+  font-weight: bold;
+}
