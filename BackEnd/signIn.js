@@ -37,22 +37,11 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
    console.log('Signed In');
-    function Login() {
-    var popup = document.getElementById("Login");
-   popup.classList.toggle("show");
-    }
     // ...
   } 
   else {
-  
-    function Logout() {
-      var popup = document.getElementById("Logout");
-      popup.classList.toggle("show");
-      
-    }
-    // User is signed out.
-    console.log('signed out');
-    
+        // User is signed out.
+    console.log('signed out'); 
   }
 });
 
