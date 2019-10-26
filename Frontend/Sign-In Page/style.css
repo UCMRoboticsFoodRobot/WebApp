@@ -46,3 +46,40 @@ body:before
     position: relative;
     margin: 20px 0;
 }
+.form .input-box input
+{
+    width: 100%;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #777;
+    outline: none;
+    padding: 10px;
+    padding-left: 25px;
+    box-sizing: border-box;
+    font-weight: bold;
+    color: #777;
+}
+
+.form .input-box input:focus,
+.form .input-box input:valid
+{
+    border-bottom: 2px solid #03a9f4;
+}
+.form .input-box .fa
+{
+    position: absolute;
+    top: 8px;
+    left: 0;
+    font-size: 18px;
+    color: #777;
+}
+
+.form .input-box input[type= "submit"]
+{
+    border: none;
+    cursor: pointer;
+    background: #03a9f4;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.5s;
+}
