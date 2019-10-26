@@ -6,24 +6,31 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Staatliches&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 </head>
 
-<body>
-    <div class="container-fluid">
-        <div class="container-fluid text-center">
-            <h1>
-                <strong>Order History</strong>
-            </h1>
+<body style="background: #dddddd; font-family: Roboto;">
+    <div class="container">
+        <div class="navbar">
+            <div class="container-fluid text-center">
+                <h1 class="display-1" style="font-family: Staatliches; padding: 10px; font-weight: 700; font-size: 50px">
+                    Order History
+                </h1>
+            </div>
         </div>
-        <div class="well well-sm">
-            <h2>
-                <strong>Current Orders</strong>
+        <div class="well well-sm" style="border-radius:5px">
+            <h2 class="display-2" style="font-family: Staatliches; margin-top:5px; font-weight: 700;">
+                Current Orders
             </h2>
-            <h3>Order Number:</h3>
-            <h3>Status:</h3>
+            <h3 style="font-size: 18px">
+                Order Number:
+            </h3>
+            <h3 style="font-size: 18px">
+                Status:
+            </h3>
 
             <div class="table-responsive">
                 <table class="table">
@@ -36,16 +43,16 @@
             </div>
         </div>
 
-        <button class="btn btn-success">View Receipt</button> 
-        <button class="btn btn-info">Change Order</button>
-        <button class="btn btn-danger">Cancel Order</button>
-        <div class="well well-sm">
-            <h2>
-                <strong>Previous Orders</strong>
+        <button class="btn btn-success" style="font-size: 16px; margin-right: 20px; margin-bottom: 20px; padding: 10px">View Receipt</button> 
+        <button class="btn btn-info" style="font-size: 16px; margin-right: 20px; margin-bottom: 20px; padding: 10px">Change Order</button>
+        <button class="btn btn-danger" style="font-size: 16px; margin-right: 20px; margin-bottom: 20px; padding: 10px">Cancel Order</button>
+        <div class="well well-sm" style="border-radius: 5px">
+            <h2 class="display-2" style="font-family: Staatliches; font-weight: 700; margin-top: 5px">
+                Previous Orders
             </h2>
 
             <div class="dropdown"> 
-                    <button class="btn btn-default dropdown-toggle" type="button" id="sortBy" data-toggle="dropdown">Sort By
+                    <button class="btn btn-default dropdown-toggle" type="button" id="sortBy" data-toggle="dropdown" style="margin-top: 10px; margin-bottom: 10px">Sort By
                     <span class="caret"></span></button>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="sortBy">
                         <li role="presentation"><a role="menuitem" tabindex="-1">Most Recent</a></li>
