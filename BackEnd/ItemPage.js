@@ -1,25 +1,24 @@
-//st loginList = document.querySelector('#login-list')
-const form = document.querySelector('#item-form')
+const itemList = document.querySelector('#item-list')
 
 
 //create element and render login
 function renderItem(doc){
 
   let li = document.createElement('li');
-  let name = document.createElement('span');
-  let username = document.createElement('span');
+  let itemname = document.createElement('span');
+  let itemprice = document.createElement('span');
   
   //sets the data values to variables
   li.setAttribute('data-id', doc.id);
-  name.textContent = doc.data().name;
-  username.textContent = doc.data().username;
+  name.textContent = doc.data().itemName;
+  username.textContent = doc.data().itemPrice;
 
   //adds the data to the li
-  li.appendChild(name);
-  li.appendChild(username);
+  li.appendChild(itemname + ": $" +  itemprice);
+ // li.appendChild(itemprice);
 
   //adds the li to our loginlist id
-  loginList.appendChild(li);
+  itemList.appendChild(li);
 }
 
 //getting data
