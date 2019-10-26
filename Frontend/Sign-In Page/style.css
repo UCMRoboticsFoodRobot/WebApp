@@ -35,3 +35,14 @@ body:before
     padding: 50px;
     box-sizing: border-box;
 }
+.form h2 
+{
+    color: #777;
+    margin: 0 0 40px;
+    padding: 0;
+}
+.form .input-box
+{
+    position: relative;
+    margin: 20px 0;
+}
