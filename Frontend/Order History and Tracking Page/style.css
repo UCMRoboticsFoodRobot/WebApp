@@ -1,16 +1,16 @@
 .orderHistory {
-  font-family: Arial;
+  font-family: 'Roboto', sans-serif;
   text-align: center;
   color: #19D9FF;
 }
 
 .currentOrders {
-  font-family: Arial;
+  font-family: 'Roboto', sans-serif;
   color: #19D9FF;
 }
 
 #orderNumber {
-  font-family: Arial;
+  font-family: 'Roboto', sans-serif;
   font-weight: bold;
   float: left;
   padding-right: 10px;
@@ -18,25 +18,25 @@
 }
 
 #number {
-  font-family: Arial;
+  font-family: 'Roboto', sans-serif;
   padding-bottom: 20px;
 }
 
 #statusDetails {
-  font-family: Arial;
+  font-family: 'Roboto', sans-serif;
   font-weight: bold;
   float: left;
   padding-right: 10px;
 }
 
 #status {
-  font-family: Arial;
+  font-family: 'Roboto', sans-serif;
   padding-bottom: 20px;
 }
 
 table {
   width: 100%;
-  font-family: Arial;
+  font-family: 'Roboto', sans-serif;
   margin-bottom: 20px;
 }
 
@@ -50,6 +50,7 @@ th {
   padding-bottom: 5px;
   border-bottom: 1px solid #dddddd;
 }
+
 td {
   padding: 20px;
   border-bottom: 1px solid #dddddd;
@@ -85,11 +86,22 @@ td {
 }
 
 .previousOrders {
-  font-family: Arial;
+  font-family: 'Roboto', sans-serif;
   color: #19D9FF;
 }
 
+#dateOrdered, #itemPrevious {
+  text-align: left;
+  padding-left: 20px;
+}
+
+#quantityPrevious, #pricePrevious, #orderNumberPrevious {
+  text-align: center;
+}
+
+
+
 #sort {
-  font-family: Arial;
+  font-family: 'Roboto', sans-serif;
   font-weight: bold;
 }
