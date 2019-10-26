@@ -3,7 +3,7 @@ const form = document.querySelector('#item-form')
 
 
 //create element and render login
-/*function renderLogin(doc){
+function renderItem(doc){
 
   let li = document.createElement('li');
   let name = document.createElement('span');
@@ -23,24 +23,10 @@ const form = document.querySelector('#item-form')
 }
 
 //getting data
-db.collection('LoginDetails').get().then((snapshot) => {
+db.collection('Item').get().then((snapshot) => {
   snapshot.docs.forEach(doc => {
-    renderLogin(doc);
+    renderItem(doc);
   }) 
-})*/
-
-
-//saving data
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  db.collection('Item').add({
-    itemName: form.itemName.value,
-    itemPrice: form.itemPrice.value,
-    itemStock: form.itemsInStock.value,
-    itemIsInStock: form.isInStock.value
-  })
-  form.itemName.value = '';
-  form.itemPrice.value = '';
-  form.itemsInStock.value = '';
-  form.isInStock.value = '';
 })
+
+
