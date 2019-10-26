@@ -88,3 +88,17 @@ body:before
 {
     background: #ff4987; 
 }
+
+.form a
+{
+    text-decoration: none;
+    color: #777;
+    margin-top: 20px;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.5s;
+}
+.form a:hover
+{
+    color: #ff4987;
+}
