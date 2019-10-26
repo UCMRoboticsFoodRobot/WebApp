@@ -83,3 +83,8 @@ body:before
     font-weight: bold;
     transition: 0.5s;
 }
+
+.form .input-box input[type= "submit"]:hover
+{
+    background: #ff4987; 
+}
