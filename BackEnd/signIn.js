@@ -15,7 +15,6 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 db.settings({ timestampsInSnapshots: true });
 
-
 //Sign in existing users:
 
 const SignInform = document.querySelector('#signIn-form')
@@ -23,10 +22,9 @@ const SignInform = document.querySelector('#signIn-form')
 SignInform.addEventListener('submit', (e) => {
   e.preventDefault();
 var useremailSignIn = SignInform.userEmailSignIn.value;
-var userpasswordSignIn = SignInform.userPasswordSignIn.value;
+var userpasswordSignIn = SignInform.userPasswordSignIn.value;//User 
 firebase.auth().signInWithEmailAndPassword(useremailSignIn, userpasswordSignIn).catch(function(error) {
-
-  // Handle Errors here.
+  
   var errorCode = error.code;
   var errorMessage = error.message;
   // ...
@@ -40,10 +38,10 @@ firebase.auth().onAuthStateChanged(function(user) {
     // User is signed in.
    console.log('Signed In');
     // ...
-  } else {
-    // User is signed out.
-    console.log('signed out');
-    // ...
+  } 
+  else {
+        // User is signed out.
+    console.log('signed out'); 
   }
 });
 
