@@ -1,7 +1,7 @@
 
  // Your web app's Firebase configuration
  var firebaseConfig = {
-  apiKey: "AIzaSyBliJ3qXi3KNfG2i6r1bSWI1wDPGnXtJFc",
+  apiKey: "AIzaSyA-p1zXRhGmSsA8ePtZO8Qbb3KVaUNh7TY ",
   authDomain: "ucmroboticsfoodrobot.firebaseapp.com",
   databaseURL: "https://ucmroboticsfoodrobot.firebaseio.com",
   projectId: "ucmroboticsfoodrobot",
@@ -37,22 +37,11 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
    console.log('Signed In');
-    function Login() {
-    var popup = document.getElementById("Login");
-   popup.classList.toggle("show");
-    }
     // ...
   } 
   else {
-  
-    function Logout() {
-      var popup = document.getElementById("Logout");
-      popup.classList.toggle("show");
-      
-    }
-    // User is signed out.
-    console.log('signed out');
-    
+        // User is signed out.
+    console.log('signed out'); 
   }
 });
 
