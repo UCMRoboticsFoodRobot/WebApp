@@ -16,7 +16,9 @@ const db = firebase.firestore();
 db.settings({ timestampsInSnapshots: true });
 
 //Sign in existing users:
-
+var errorCode=null;
+var errorMessage=null;
+var incorrectlogins = 0;
 const SignInform = document.querySelector('#signIn-form')
 
 SignInform.addEventListener('submit', (e) => {
@@ -24,9 +26,24 @@ SignInform.addEventListener('submit', (e) => {
 var useremailSignIn = SignInform.userEmailSignIn.value;
 var userpasswordSignIn = SignInform.userPasswordSignIn.value;//User 
 firebase.auth().signInWithEmailAndPassword(useremailSignIn, userpasswordSignIn).catch(function(error) {
-  
-  var errorCode = error.code;
-  var errorMessage = error.message;
+
+  errorCode = error.code;
+  errorMessage = error.message;
+
+  if (errorCode != null || errorMessage != null){
+    incorrectlogins++;
+    // popup box is temporary. Front end team can implement onpage words.
+    window.alert("wrong password/email");
+  }
+
+  if (incorrectlogins >= 3){
+    //Lockout fnc baby form
+    console.log("You've been locked out");
+  }
+
+  console.log(errorCode);
+  console.log(errorMessage);
+
   // ...
 })
 });
