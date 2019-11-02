@@ -1,6 +1,6 @@
 
 //create element and render login
-function renderLogin(doc, id){
+function renderOrder(doc, id){
 
   let subtotal = document.createElement('span');
   let taxes = document.createElement('span');
@@ -34,7 +34,7 @@ function renderLogin(doc, id){
 db.collection('OrderSummary').get().then((snapshot) => {
   snapshot.docs.forEach(doc => {
     let id = doc.id;
-    renderLogin(doc, id);
+    renderOrder(doc, id);
 
   }) 
 })
