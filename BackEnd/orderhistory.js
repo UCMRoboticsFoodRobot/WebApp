@@ -16,26 +16,34 @@ function renderOrder(doc){
     
     //sets the data values to variables
     li.setAttribute('data-id', doc.id);
+    
     name.textContent = doc.data().name;
     username.textContent = doc.data().username;
 
+
+    doc.data().Items.forEach(li.appendChild(key))
     //adds the data to the li
-      
+    for(doc.data().Items.length){
       li.appendChild(name);
       li.appendChild(username);
-
+    }
     //adds the li to our loginlist id
     ul.appendChild(li);
     
     
   }
   
-  //getting data
-  db.collection('OrderSummary').get().then((snapshot) => {
-    snapshot.docs.forEach(doc => {
-      renderOrder(doc);
+  firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+      db.collection('OrderSummary').where(userUID, "==", user.uid).get().then((snapshot) => {
+        snapshot.docs.forEach(doc => {
+          renderOrder(doc);
   
-    }) 
-  })
+        }) 
+      })
+    } else {
+      alert("Please sign in")
+    }
+  });
   
   
