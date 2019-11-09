@@ -21,7 +21,7 @@ function renderOrder(doc){
     username.textContent = doc.data().username;
 
 
-    doc.data().Items.forEach(li.appendChild(key))
+    doc.data().Items.forEach(li.appendChild(key));
     //adds the data to the li
     for(doc.data().Items.length){
       li.appendChild(name);
