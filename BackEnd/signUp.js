@@ -21,17 +21,23 @@ const signUpform = document.querySelector('#signUp-form')
 
 signUpform.addEventListener('submit', (e) => {
   e.preventDefault();
+
 var useremailSignUp = signUpform.userEmailSignUp.value;
 var userpasswordSignUp = signUpform.userPasswordSignUp.value; //User 
-var userpasswordConfirmSignUp = signUpform.userpasswordConfirmSignUp;
+var userpasswordConfirmSignUp = signUpform.userPasswordConfirmSignUp.value;
+
+
+
 if(userpasswordSignUp === userpasswordConfirmSignUp){
-    firebase.auth().createUserWithEmailAndPassword(useremailSignUp, userpasswordSignUp).catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        console.log("User created")
-        // ...
-      })
+  firebase.auth().createUserWithEmailAndPassword(useremailSignUp, userpasswordSignUp)
+  .then(()=>{
+      console.log('Signup successful.');
+      
+     })
+  .catch((error)=> {
+      console.log(error.code);
+      console.log(error.message);
+    });
 }
 else{
     console.log("passwords didnt match")
