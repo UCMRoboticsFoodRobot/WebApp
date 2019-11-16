@@ -1,13 +1,15 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: Roboto, sans-serif;
   
     /*Setting the background image of the main page:
     Would recommend changing the images as you see fit */
+    /*Original Image Background
     background: url(images/MercedRoboticsPage.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;*/
+    background-color: #ddd;
 }
 
 #main{
@@ -33,21 +35,28 @@ body {
   border: solid;
   text-align: center;
   display: inline-block;
-  padding-top: 0px;
-  padding-bottom: 0px;
+  /*padding-top: 0px;
+  padding-bottom: 0px;*/
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.sign-in{
+    font-size: 35px;
 }
 
 .form 
 {
     position: absolute;
     top: 50%;
-    Left: 25%;
+    Left: 50%;
     transform: translate(-50%,-50%);
     width: 350px;
     min-height: 400px;
     background: #fff;
-    box-shadow: 0 15px 50px rgba(0,0,0,.5);
+    box-shadow: 5px 10px 20px rgba(0,0,0,.5);
     padding: 50px;
+    border-radius: 10px;
     box-sizing: border-box;
 
 }
@@ -72,7 +81,7 @@ body {
     padding: 10px;
     padding-left: 25px;
     box-sizing: border-box;
-    font-weight: bold;
+    /*font-weight: bold;*/
     color: #777;
 }
 
@@ -109,11 +118,14 @@ body {
 {
     text-decoration: none;
     color: #777;
-    margin-top: 20px;
+    font-size: 14px;
+    margin-top: 10px;
     font-weight: bold;
     display: inline-block;
     transition: 0.5s;
 }
+
+
 .form a:hover
 {
     color: #ff4987;
