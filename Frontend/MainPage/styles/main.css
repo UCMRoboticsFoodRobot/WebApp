@@ -1,23 +1,8 @@
-body {
-  background-color: white;
-  font-family: Helvetica;
+body{
+  font-family:"Verdana", Times, serif;
+  background-color:#f4f4f4;
+  overflow-x:hidden;
 }
-
-
-button {
-  background-color: lightblue;
-  border: none;
-  font-family: Helvetica;
-  font-weight: bold;
-  font-size: 18px;
-  padding: 10px 24px;
-  border-radius: 8px;
-}
-
-div {
-  text-align: center;
-}
-
 
 .navbar{
   background-color:#3b5998;

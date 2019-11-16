@@ -1,25 +1,43 @@
 <!DOCTYPE html>
 <html>
+        <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-auth.js"></script>
     <head>
         <title>Sign Up</title>
         
     </head>
     <body>
-        <form>
-            <h2>Sign Up</h2>
-            <div class = "input-box">
-                <input type = "email" name = "" placeholder = "Email">
-            </div>
-            <div class = "input-box">
-                <input type = "username" name = "" placeholder = "username">
-            </div>
-            <div class = "input-box">
-                <input type = "password" name = "" placeholder = "Password">
-            </div>
-            <div class = "input-box">
-                <input type = "confirmation" name = "" placeholder = "Passconfirm">
-            </div>
-                <button id="register">Submit</button>
-        </form>
+            <div class = "form">
+    
+                    <h2> Sign Up </h2>
+                    <form id = "signUp-form">
+                      <div class = "input-box">
+                          <i class="fas fa-user" aria-hidden="true"></i>
+                          <text>Email</text>
+                           <input type = "email" name = "" placeholder = "Username" id = "userEmailSignUp" required = ""></inputtype>
+                      </div>
+                      <div class = "input-box">
+                          <i class="fas fa-user" aria-hidden="true"></i>
+                          <text>Password</text>
+                          <input type = "password" name = "" placeholder = "Password" id = "userPasswordSignUp" required = ""></inputtype>
+                      </div> 
+                      <div class = "input-box">
+                            <i class="fas fa-user" aria-hidden="true"></i>
+                            <text>Confirm Password</text>
+                            <input type = "password" name = "" placeholder = "Password" id = "userPasswordConfirmSignUp" required = ""></inputtype>
+                        </div>
+            
+                      <div class = "input-box">
+                          <i class="fas fa-user" aria-hidden="true"></i>
+                          <input type = "submit" name = ""  id = "signUpBtn">
+                      </div>
+                    
+                    
+                </form>
+              </div>
     </body>
 </html>
+
+<script src="../../BackEnd/signUp.js"></script>   
