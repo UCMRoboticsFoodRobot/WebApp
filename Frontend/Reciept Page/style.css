@@ -8,6 +8,7 @@ body{
   background-color:#3b5998;
   overflow:hidden;
   height:63px;
+  position: relative;
 }
 
 .navbar a{
@@ -28,6 +29,26 @@ body{
 .navbar a:hover{
   background-color:#ddd;
   color:#000;
+}
+
+.fa-user-circle{
+  font-size: 30px;
+  color: #fff;
+  padding-right: 20px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.fa-user-circle:hover{
+  background-color: #333333;
+  
+}
+
+.dropdown-menu{
+  display: inline-block;
 }
 
 .side-nav{
