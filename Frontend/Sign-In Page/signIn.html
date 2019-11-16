@@ -24,7 +24,7 @@
 </head>
 <body>
   <div class = "form">
-    
+        <button class="button backbutton" id="backbutton">Back</button>
         <h2> Sign In </h2>
         <form id = "signIn-form">
           <div class = "input-box">
@@ -67,6 +67,11 @@
 
     <!--Calls on the respective js file-->
      <script src="../../BackEnd/signIn.js"></script>    
+     <script type="text/javascript">
+       document.getElementById("backbutton").onclick = function() {
+          location.href = "../MainPage/main.html";
+       };
+     </script>
 
 
 </body>
