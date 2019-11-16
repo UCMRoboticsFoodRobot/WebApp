@@ -9,19 +9,21 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
-/* Splits the Screen into blue and white*/
-body:before 
-{
-    content: '';
-    position: absolute;
-    top: 0;
-    Left: -25%;
-    width: 50%;
-    height: 100%;
-    background: #03a9f4;
-    opacity: 0.8;
 
+#main{
+  transition:margin-left 0.5s;
+  padding:20px;
+  overflow:hidden;
+  width:100%;
 }
+
+@media(max-width:568px){
+  .navbar-nav{display:none}
+}
+
+@media(min-width:568px){
+  /*.open-slide{display:none}*/
+
 .form 
 {
     position: absolute;
