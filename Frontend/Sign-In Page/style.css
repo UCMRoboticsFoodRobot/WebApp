@@ -41,9 +41,6 @@ body {
   font-size: 16px;
 }
 
-.sign-in{
-    font-size: 35px;
-}
 
 .form 
 {
@@ -51,7 +48,9 @@ body {
     top: 50%;
     Left: 50%;
     transform: translate(-50%,-50%);
-    width: 350px;
+    /*width: 350px;*/
+    width: 35%;
+    height: 60%;
     min-height: 400px;
     background: #fff;
     box-shadow: 5px 10px 20px rgba(0,0,0,.5);
@@ -62,6 +61,7 @@ body {
 }
 .form h2 
 {
+    font-size: 35px;
     color: #777;
     margin: 0 0 40px;
     padding: 0;
@@ -107,8 +107,12 @@ body {
     color: #fff;
     font-weight: bold;
     transition: 0.5s;
+    width: 50%;
 }
 
+.LoginBtn{
+    text-align: center;
+}
 .form .input-box input[type= "submit"]:hover
 {
     background: #ff4987; 
