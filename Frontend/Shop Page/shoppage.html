@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
 <head>
     <title>Shop</title>
@@ -15,14 +15,14 @@
                     </svg>
                   </a>
                 </span>
-            
+
                 <ul class="navbar-nav">
                     <li><a href="../../Frontend/MainPage/Mission Statement.html">Mission Statement</a></li>
                     <li><a href="../../Frontend/MainPage/FAQ.html">FAQ</a></li>
                     <li><a href="../../Frontend/MainPage/ContactUs.html">Contact Us</a></li>
                    </ul>
               </nav>
-            
+
               <div id="side-menu" class="side-nav">
                 <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
                 <a href="../MainPage/main.html">Home</a>
@@ -37,13 +37,13 @@
                 <a href="../Sign Out Page/Logout.html">Logout</a>
                 <a href="../UpdateStock/alterItem.html">UpdateStock</a>
               </div>
-            
+
               <script>
                 function openSlideMenu(){
                   document.getElementById('side-menu').style.width = '250px';
                   document.getElementById('main').style.marginLeft = '250px';
                 }
-            
+
                 function closeSlideMenu(){
                   document.getElementById('side-menu').style.width = '0';
                   document.getElementById('main').style.marginLeft = '0';
@@ -56,8 +56,11 @@
     <input type="text"/>
     <button type="button">🅱️utton</button>
     <div class="invContainer">
-        <ul id="item-list">
+      <h1>Our Menu</h1>
 
+      <!--- Food Name, Quantity (Stock) -->
+        <ul id="item-list">
+          <li>Food Name</li>
         </ul>
     </div>
 </body>
