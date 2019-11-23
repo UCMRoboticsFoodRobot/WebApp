@@ -7,11 +7,19 @@ function renderItem(doc){
   let li = document.createElement('li');
   let itemname = document.createElement('span');
   let itemprice = document.createElement('span');
+  let itemstock = document.createElement('span');
   
   //sets the data values to variables
+  
   li.setAttribute('data-id', doc.id);
-  name.textContent = doc.data().itemName;
-  username.textContent = doc.data().itemPrice;
+  itemname = doc.itemName;
+  itemprice = doc.itemPrice;
+  itemstock = doc.itemStock;
+
+  itemname.textContent = doc.data().itemName;
+  itemprice.textContent = doc.data().itemPrice;
+  itemstock.textContent = doc.data().itemStock;
+
 
   //adds the data to the li
   li.appendChild(itemname + ": $" +  itemprice);
@@ -24,7 +32,9 @@ function renderItem(doc){
 //getting data
 db.collection('Item').get().then((snapshot) => {
   snapshot.docs.forEach(doc => {
-    renderItem(doc);
+    if(doc.itemInStock == True){
+      renderItem(doc);
+    }
   }) 
 })
 
