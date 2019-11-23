@@ -1,7 +1,7 @@
 
  // Your web app's Firebase configuration
  var firebaseConfig = {
-  apiKey: "AIzaSyA-p1zXRhGmSsA8ePtZO8Qbb3KVaUNh7TY ",
+  apiKey: "",
   authDomain: "ucmroboticsfoodrobot.firebaseapp.com",
   databaseURL: "https://ucmroboticsfoodrobot.firebaseio.com",
   projectId: "ucmroboticsfoodrobot",
@@ -27,6 +27,11 @@ firebase.auth().signInWithEmailAndPassword(useremailSignIn, userpasswordSignIn).
   
   var errorCode = error.code;
   var errorMessage = error.message;
+  var len = error.message.length;
+  if(len != 0){
+    alert("wrong credentials / user doesnt exist");
+  }
+
   // ...
 })
 });
@@ -37,13 +42,17 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
    console.log('Signed In');
+   location.replace("http://127.0.0.1:5500/Frontend/MainPage/main.html") //This need to be fixed to the actual https url later on.. 
     // ...
   } 
   else {
         // User is signed out.
-    console.log('signed out'); 
+    console.log('Signed out'); 
+    alert("Signed out");
   }
 });
+
+
 
 function signOut(){
 firebase.auth().signOut();
