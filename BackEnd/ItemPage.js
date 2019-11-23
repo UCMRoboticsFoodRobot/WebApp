@@ -1,7 +1,7 @@
 const itemList = document.querySelector('#item-list')
 
 var firebaseConfig = {
-  apiKey: "AIzaSyA-p1XRhGmSsA8ePtZ08Qbb3kVaUNh7TY",
+  apiKey: "",
   authDomain: "ucmroboticsfoodrobot.firebaseapp.com",
   databaseURL: "https://ucmroboticsfoodrobot.firebaseio.com",
   projectId: "ucmroboticsfoodrobot",
@@ -29,13 +29,13 @@ function renderItem(doc){
   
   li.setAttribute('data-id', doc.id);
 
-  itemname.textContent = doc.data().itemName;
-  itemprice.textContent = doc.data().itemPrice;
-  itemstock.textContent = doc.data().itemStock;
+  itemname = doc.data().itemName;
+  itemprice = doc.data().itemPrice;
+  itemstock = doc.data().itemStock;
 
 
   //adds the data to the li
-  li.appendChild(itemname + ": $" +  itemprice + " : " + itemstock);
+  li.append(itemname + ": $" +  itemprice + " Stock: " + itemstock);
  // li.appendChild(itemprice);
 
   //adds the li to our loginlist id
@@ -45,9 +45,9 @@ function renderItem(doc){
 //getting data
 db.collection('Item').get().then((snapshot) => {
   snapshot.docs.forEach(doc => {
-    //if(doc.itemInStock == True){
+    if(doc.data().itemInStock){
       renderItem(doc);
-    //}
+    }
   }) 
 })
 
