@@ -50,7 +50,7 @@ function renderOrder(doc){
 
         }
     }
-    {
+    else{
       myMap = doc.data().Items;
       
       //loops through hashmap and pushes values to table
@@ -90,10 +90,13 @@ function renderOrder(doc){
     
   }
   
-      db.collection('OrderSummary').doc('hSAp2J2w2ou2ngYQ6dAU').get().then(doc => {
-          renderOrder(doc);
-  
-        }) 
-    
+  db.collection('OrderSummary').get().then((snapshot) => {
+    snapshot.docs.forEach(doc => {
+      renderOrder(doc);
+
+    }) 
+  })
+      
+      
   
   
