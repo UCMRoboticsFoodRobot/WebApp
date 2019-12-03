@@ -23,29 +23,31 @@ db.settings({ timestampsInSnapshots: true });
 //create element and render login
 function renderOrder(doc){
 
-  
-  
-    myMap = doc.data().Items;
-    
-    for (let i of Object.keys(myMap)) {
-      let tr = document.createElement('tr')
-      let price = document.createElement('td');
-      let quantity = document.createElement('td');
-      let item = document.createElement('td');
-    
-       
+  //checks if the order has been received
+    if(!doc.data().received){
+      myMap = doc.data().Items;
+      
+      //loops through hashmap and pushes values to table
+        for (let i of Object.keys(myMap)) {
+          let tr = document.createElement('tr')
+          let price = document.createElement('td');
+          let quantity = document.createElement('td');
+          let item = document.createElement('td');
+        
+          
 
 
-      item.innerHTML = i
-      arr = myMap[i]
-      price.innerHTML = arr[0]
-      quantity.innerHTML = arr[1]
+          item.innerHTML = i
+          arr = myMap[i]
+          price.innerHTML = "$ " + arr[0].toFixed(2)
+          quantity.innerHTML = arr[1]
 
-      tr.append(item);
-      tr.append(quantity);
-      tr.append(price);
-      currentTable.appendChild(tr);
+          tr.append(item);
+          tr.append(quantity);
+          tr.append(price);
+          currentTable.appendChild(tr);
 
+        }
     }
 
    
