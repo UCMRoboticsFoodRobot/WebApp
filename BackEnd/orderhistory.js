@@ -23,16 +23,19 @@ db.settings({ timestampsInSnapshots: true });
 //create element and render login
 function renderOrder(doc){
 
-  let tr = document.createElement('tr')
-  let price = document.createElement('td');
-  let quantity = document.createElement('td');
-  let item = document.createElement('td');
-
-    
+  
   
     myMap = doc.data().Items;
     
     for (let i of Object.keys(myMap)) {
+      let tr = document.createElement('tr')
+      let price = document.createElement('td');
+      let quantity = document.createElement('td');
+      let item = document.createElement('td');
+    
+       
+
+
       item.innerHTML = i
       arr = myMap[i]
       price.innerHTML = arr[0]
