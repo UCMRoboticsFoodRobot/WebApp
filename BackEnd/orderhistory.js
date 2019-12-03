@@ -1,5 +1,7 @@
 
-const currentTable = document.querySelector('#current-order-table')
+const currentTable = document.getElementById("current-order-table")
+
+
 
 var firebaseConfig = {
   apiKey: "AIzaSyA-p1zXRhGmSsA8ePtZO8Qbb3KVaUNh7TY",
@@ -21,42 +23,39 @@ db.settings({ timestampsInSnapshots: true });
 //create element and render login
 function renderOrder(doc){
 
-    let tr = document.createElement('tr')
-    let price = document.createElement('td');
-    let quantity = document.createElement('td');
-    let item = document.createElement('td');
+  let tr = document.createElement('tr')
+  let price = document.createElement('td');
+  let quantity = document.createElement('td');
+  let item = document.createElement('td');
 
-    let li = document.createElement('li');
-
-    //sets the data values to variables
-    tr.setAttribute('data-id', doc.id);
     
+  
+    myMap = doc.data().Items;
+    
+    for (let i of Object.keys(myMap)) {
+      item.innerHTML = i
+      arr = myMap[i]
+      price.innerHTML = arr[0]
+      quantity.innerHTML = arr[1]
 
-    //adds the li to our loginlist id
-    var map;
-    var entry
-    map = doc.data().Items;
-
-    map.forEach(maps => {
-      item = entry.String;
-      quantity = entry.Array[0];
-      price = ent[1];
-      tr.appendChild(item);
-      tr.appendChild(quantity);
-      tr.appendChild(price);
+      tr.append(item);
+      tr.append(quantity);
+      tr.append(price);
       currentTable.appendChild(tr);
-    })
+
+    }
+
+   
       
     
     
     
   }
   
-      db.collection('OrderSummary').get().then((snapshot) => {
-        snapshot.docs.forEach(doc => {
+      db.collection('OrderSummary').doc('hSAp2J2w2ou2ngYQ6dAU').get().then(doc => {
           renderOrder(doc);
   
         }) 
-      })
+    
   
   
