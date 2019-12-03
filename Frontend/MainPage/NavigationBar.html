@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Main Order Page</title>
+  <!-- Bootstrap -->
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
   <link rel="stylesheet" href="styles/main.css">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/857afb1854.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -21,9 +25,22 @@
     </span>
 
     <ul class="navbar-nav">
-      <li><a href="Mission Statement.html">Mission Statement</a></li>
-      <li><a href="FAQ.html">FAQ</a></li>
-      <li><a href="ContactUs.html">Contact Us</a></li>
+      <li id="mission-statement"><a href="Mission Statement.html">Mission Statement</a></li>
+      <li id="faq"><a href="FAQ.html">FAQ</a></li>
+      <li id="contact-us"><a href="ContactUs.html">Contact Us</a></li>
+      
+      <li class="profile-button">
+        <div class="dropdown-menu">
+          <button class="user-profile-icon">
+              <i class="fas fa-user-circle"></i>
+          </button>
+          <div class="dropdown-content">
+              <a href="#" class="sign-in">Sign In</a>
+              <a href="#" class="settings">Settings</a>
+          </div>
+        </div>
+      </li>
+      
     </ul>
   </nav>
   <div id="side-menu" class="side-nav">
