@@ -20,6 +20,12 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 db.settings({ timestampsInSnapshots: true });
 
+function loadVars(){
+  onClicked = true;
+}
+     
+
+
 
 //create element and render login
 function renderOrder(doc){
@@ -90,9 +96,25 @@ function renderOrder(doc){
     
   }
   
+  function editOrder(){
+    
+    if(onClicked){
+      onClicked = false;
+      button = document.getElementById("editorder")
+      button.innerHTML = "Close Edit"
+    }
+    else{
+      onClicked = true;
+      button = document.getElementById("editorder")
+      button.innerHTML = "Edit Order"
+    }
+      
+  }
+
   db.collection('OrderSummary').get().then((snapshot) => {
     snapshot.docs.forEach(doc => {
       renderOrder(doc);
+      
 
     }) 
   })

@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body style="background: #dddddd; font-family: Roboto;">
+<body onload="loadVars()" style="background: #dddddd; font-family: Roboto;">
    
         <nav class="navbar">
                 <span class="open-slide">
@@ -117,7 +117,7 @@
             </div>
             <div class="text-center">
                 <button class="btn btn-success" style="font-size: 16px; margin-right: 30px; margin-bottom: 10px; padding: 10px">View Receipt</button> 
-                <button class="btn btn-info" style="font-size: 16px; margin-right: 30px; margin-bottom: 10px; padding: 10px">Edit Order</button>
+                <button class="btn btn-info" style="font-size: 16px; margin-right: 30px; margin-bottom: 10px; padding: 10px" id="editorder" onclick="editOrder()" >Edit Order</button>
                 <button class="btn btn-danger" style="font-size: 16px; margin-right: 30px; margin-bottom: 10px; padding: 10px">Cancel Order</button>
             </div>
         </div>
