@@ -108,8 +108,6 @@ td {
   font-weight: bold;
 }
 
-
-
 .navbar{
   background-color:#3b5998;
   overflow:hidden;
@@ -119,20 +117,23 @@ td {
 
 .navbar a{
   float:left;
-  display:block;
-  color:#f2f2f2;
+  display:inline-block;
+  color:#ddd;
   text-align:center;
-  padding:14px 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
   text-decoration:none;
   font-size:17px;
 }
 
 .navbar ul{
-  margin:8px 0 0 0;
+  /* margin:8px 0 0 0; */
   list-style:none;
 }
 
 .navbar a:hover{
+  height: 63px;
   background-color:#ddd;
   color:#000;
 }
@@ -165,7 +166,7 @@ td {
 }
 
 .side-nav .btn-close{
-  position:absolute;
+  position: absolute;
   top:0;
   right:22px;
   font-size:36px;
