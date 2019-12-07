@@ -1,4 +1,4 @@
-const itemList = document.querySelector('#item-list')
+const itemList = document.getElementById('item-list')
 
 var firebaseConfig = {
   apiKey: "",
@@ -20,35 +20,32 @@ db.settings({ timestampsInSnapshots: true });
 //create element and render login
 function renderItem(doc){
 
-  let li = document.createElement('li');
-  let itemname = document.createElement('span');
-  let itemprice = document.createElement('span');
-  let itemstock = document.createElement('span');
+  let tr = document.createElement('tr');
+  let itemname = document.createElement('td');
+  let itemprice = document.createElement('td');
   
   //sets the data values to variables
   
-  li.setAttribute('data-id', doc.id);
+  tr.setAttribute('data-id', doc.id);
 
-  itemname = doc.data().itemName;
-  itemprice = doc.data().itemPrice;
-  itemstock = doc.data().itemStock;
+  itemname.innerHTML = doc.data().itemName;
+  itemprice.innerHTML = doc.data().itemPrice;
 
 
   //adds the data to the li
-  li.append(itemname + ": $" +  itemprice + " Stock: " + itemstock);
- // li.appendChild(itemprice);
+  tr.append(itemname);
+  tr.append(itemprice);
 
-  //adds the li to our loginlist id
-  itemList.appendChild(li);
+  itemList.appendChild(tr);
+
+
+  //adds the tr to our table id
+  itemList.appendChild(tr);
 }
 
 //getting data
 db.collection('Item').get().then((snapshot) => {
   snapshot.docs.forEach(doc => {
-    if(doc.data().itemInStock){
       renderItem(doc);
-    }
   }) 
 })
-
-
