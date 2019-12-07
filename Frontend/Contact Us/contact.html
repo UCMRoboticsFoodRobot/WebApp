@@ -2,25 +2,82 @@
 <html>
     <head>
         <title>Contact Us</title>
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="contactstyles.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head> 
     <body>
         <div>
-            <h1>For more help and questions</h1>
-            <div class = "input-box">
-                <input type = "first" name = "" placeholder = "first-name">
+            <nav class="navbar">
+                    <span class="open-slide">
+                        <a href="#" onclick="openSlideMenu()">
+                        <svg width="30" height="30">
+                            <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
+                            <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
+                            <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+                        </svg>
+                        </a>
+                    </span>
+            
+                    <ul class="navbar-nav">
+                        <li><a href="Mission Statement.html">Mission Statement</a></li>
+                        <li><a href="FAQ.html">FAQ</a></li>
+                        <li><a href="ContactUs.html">Contact Us</a></li>
+                    </ul>
+                    </nav>
+            
+                    <div id="side-menu" class="side-nav">
+                    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+                    <a href="../MainPage/main.html">Home</a>
+                    <a href="../MainPage/Mission Statement.html">Mission Statement</a>
+                    <a href="../MainPage/Account.html">Account</a>
+                    <a href="../Order Confirmation Page/orderconfirmationpage.html">Order Confirmation</a>
+                    <a href="../Order History and Tracking Page/Order History and Tracking Page (Bootstrap).html">Order History</a>
+                    <a href="../Reciept Page/reciept.html">Reciept</a>
+                    <a href="../Shop Page/shoppage.html">Shop Page</a>
+                    <a href="../Sign-In Page/signIn.html">Sign In</a>
+                    <a href="../Sign Out Page/Logout.html">Logout</a>
+                    <a href="../UpdateStock/alterItem.html">UpdateStock</a>
+                    </div>
+            <form action="">
+            <div class="panel panel-primary col-md-4 col-md-offset-4">
+            <div class="panel-header"><center><h1>Contact Us</h1></center></div>
+            <hr />
+            <div class = "input-box form-group">
+                <label for="first">First Name:</label>
+                <input type = "first" id="first" class="form-control" placeholder = "First Name">
+            </div>
+            <div class = "input-box form-group">
+                <label for="last">Last Name:</label>
+                <input type = "last" id="last" class="form-control" placeholder = "Last Name">
+            </div>
+            <div class = "input-box form-group">
+                <label for="email">Email:</label>
+                <input type = "email" id="email" class="form-control" placeholder = "Email">
             </div>
             <div class = "input-box">
-                <input type = "last" name = "" placeholder = "last-name">
+                <label for="text">Message:</label>
+                <input type = "question" id="text" class="form-control mb-3" placeholder = "Enter in any questions, comments, or concerns!">
             </div>
-            <div class = "input-box">
-                <input type = "email" name = "" placeholder = "Email">
+
+            <div class = "input-box form-group">
+                <label></label>
+            <center><button class="btn btn-default ">Submit</button></center>
             </div>
-            <div class = "input-box">
-                <input type = "question" name = "" placeholder = "question">
             </div>
-            <button>Submit</button>
+            </form>
+
         </div>
+
+        <script>
+        function openSlideMenu(){
+            document.getElementById('side-menu').style.width = '250px';
+        }
+
+        function closeSlideMenu(){
+            document.getElementById('side-menu').style.width = '0';
+        }
+        </script>
     </body>    
 
 </html>
