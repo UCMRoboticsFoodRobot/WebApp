@@ -1,7 +1,7 @@
 const itemList = document.getElementById('item-list')
 
 var firebaseConfig = {
-  apiKey: "",
+  apiKey: "p1zXRhGmSsA8ePtZO8Qbb3KVaUNh7TY",
   authDomain: "ucmroboticsfoodrobot.firebaseapp.com",
   databaseURL: "https://ucmroboticsfoodrobot.firebaseio.com",
   projectId: "ucmroboticsfoodrobot",
@@ -28,8 +28,8 @@ function renderItem(doc){
   
   tr.setAttribute('data-id', doc.id);
 
-  itemname.innerHTML = doc.data().itemName;
-  itemprice.innerHTML = doc.data().itemPrice;
+  itemname.innerHTML = doc.data().name;
+  itemprice.innerHTML = doc.data().price;
 
 
   //adds the data to the li
@@ -39,12 +39,10 @@ function renderItem(doc){
   itemList.appendChild(tr);
 
 
-  //adds the tr to our table id
-  itemList.appendChild(tr);
 }
 
 //getting data
-db.collection('Item').get().then((snapshot) => {
+db.collection('Items').get().then((snapshot) => {
   snapshot.docs.forEach(doc => {
       renderItem(doc);
   }) 
