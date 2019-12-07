@@ -1,94 +1,159 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+
+
+    <!DOCTYPE html>
+    <html>
     
-    <!--imports firestore-->
-    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-firestore.js"></script>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-
-
-
-      <nav class="navbar">
-          <span class="open-slide">
-            <a href="#" onclick="openSlideMenu()">
-              <svg width="30" height="30">
-                  <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
-                  <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
-                  <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
-              </svg>
-            </a>
-          </span>
+    <head>
+            <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
       
-          <ul class="navbar-nav">
-              <li><a href="../../Frontend/MainPage/Mission Statement.html">Mission Statement</a></li>
-              <li><a href="../../Frontend/MainPage/FAQ.html">FAQ</a></li>
-              <li><a href="../../Frontend/MainPage/ContactUs.html">Contact Us</a></li>
-             </ul>
-        </nav>
+            <!--imports firestore-->
+            <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-firestore.js"></script>
+             
+    
+    
+        <title>Update Stock</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto|Staatliches&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
       
-        <div id="side-menu" class="side-nav">
-          <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-          <a href="../MainPage/main.html">Home</a>
-          <a href="../MainPage/Mission Statement.html">Mission Statement</a>
-          <a href="../MainPage/Account.html">Account</a>
-          <a href="../Order Confirmation Page/orderconfirmationpage.html">Order Confirmation</a>
-          <a href="../Order History and Tracking Page/Order History and Tracking Page (Bootstrap).html">Order History</a>
-          <a href="../Reciept Page/reciept.html">Reciept</a>
-          <a href="../Shop Page/shoppage.html">Shop Page</a>
-          <a href="../Sign-In Page/signIn.html">Sign In</a>
-          <a href="../Sign Out Page/Logout.html">Logout</a>
-          <a href="../UpdateStock/alterItem.html">UpdateStock</a>
+        <script src="https://kit.fontawesome.com/bf4ae995a2.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body onload="loadVars()" style="background: #dddddd; font-family: Roboto;">
+       
+            <nav class="navbar">
+                    <span class="open-slide">
+                      <a href="#" onclick="openSlideMenu()">
+                        <svg width="30" height="30">
+                            <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
+                            <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
+                            <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+                        </svg>
+                      </a>
+                    </span>
+                
+                    <ul class="navbar-nav">
+                            <li><a href="../../Frontend/MainPage/Mission Statement.html">Mission Statement</a></li>
+                            <li><a href="../../Frontend/MainPage/FAQ.html">FAQ</a></li>
+                            <li><a href="../../Frontend/MainPage/ContactUs.html">Contact Us</a></li>
+                          </ul>
+                  </nav>
+                
+                  <div id="side-menu" class="side-nav">
+                    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+                    <a href="../MainPage/main.html">Home</a>
+                    <a href="../MainPage/Mission Statement.html">Mission Statement</a>
+                    <a href="../MainPage/Account.html">Account</a>
+                    <a href="../Order Confirmation Page/orderconfirmationpage.html">Order Confirmation</a>
+                    <a href="../Order History and Tracking Page/Order History and Tracking Page (Bootstrap).html">Order History</a>
+                    <a href="../Reciept Page/reciept.html">Reciept</a>
+                    <a href="../Shop Page/shoppage.html">Shop Page</a>
+                    <a href="../Sign-In Page/signIn.html">Sign In</a>
+                    <a href="../Sign Out Page/Logout.html">Logout</a>
+                    <a href="../UpdateStock/alterItem.html">UpdateStock</a>
+                  </div>
+                
+                  <script>
+                    function openSlideMenu(){
+                      document.getElementById('side-menu').style.width = '250px';
+                    }
+                
+                    function closeSlideMenu(){
+                      document.getElementById('side-menu').style.width = '0';
+                    }
+                  </script>
+                  
+       
+       
+        <div class="container" >
+            <div class="">
+                <!-- <div class="container-fluid text-center"> -->
+                    <h1 class="display-1" style="font-family: Staatliches; padding: 10px; font-weight: 700; font-size: 50px">
+                        <center>Update Stock</center>
+                    </h1>
+                <!-- </div> -->
+            </div>
+
+            </div>
+            <div class="well well-sm" style="border-radius: 5px">
+                <h2 class="display-2" style="font-family: Staatliches; font-weight: 700; margin-top: 5px">
+                    <center>Item List</center>
+                </h2>
+            <br> 
+            <div class="table-responsive">
+              <table class="table">
+                  <thead>
+                      <th>Item display</th>
+                      <th>Price per unit</th>
+                      <th>Items remaining in stock</th>
+                  </thead>
+                  <tbody id = "update-table">
+                      <td><input type = "text" id = "itemName" ></td>
+                      <td><input type = "text" id = "itemPrice" ></td>
+                      <td><input type = "text" id = "itemsInStock" ></td>
+
+
+                  </tbody>
+                  
+              </table>
+          </div>
+            <div class="content">
+                <center><button class="btn btn-success" style="font-size: 16px; margin-right: 30px; margin-bottom: 10px; padding: 10px">Submit</button></center>
+              </div>
+
+              </form>
+              <br>
+              <br>
+            
+            </div>
+            <form id="itemList-form">
+                <ul id="itemList"></ul>
+            </form>
+    
+            <div class="well well-sm" style="border-radius: 5px">
+                <h2 class="display-2" style="font-family: Staatliches; font-weight: 700; margin-top: 5px">
+                    <center>Item List</center>
+                </h2>
+    
+                <div class="dropdown"> 
+                        <button class="btn btn-default dropdown-toggle" type="button" id="sortBy" data-toggle="dropdown" style="margin-top: 10px; margin-bottom: 10px">Sort By
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="sortBy">
+                            <li role="presentation"><a role="menuitem" tabindex="-1">Most Recent</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1">Price: Low</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1">Price: High</a></li>
+                        </ul>   
+                    </div>    
+                
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <th>ITEM NAME</th>
+                            <th>QUANTITY</th>
+                            <th>PRICE</th>
+                        </thead>
+                        <tbody id = "previous-order-table">
+    
+                        </tbody>
+                        
+                    </table>
+                </div>
+            </div>
+    
         </div>
-      
-        <script>
-          function openSlideMenu(){
-            document.getElementById('side-menu').style.width = '250px';
-          }
-      
-          function closeSlideMenu(){
-            document.getElementById('side-menu').style.width = '0';
-          }
-        </script>
 
-    <div class="content">
-      <form id="itemUpdate-form"
-        <label for = "itemName">Item display</label>
-        <input type = "text" id = "itemName" >
-        <label for = "itemPrice"> Price per unit </label>
-        <input type = "number" id = "itemPrice">
-        <label for = "itemsInStock">Items remaing in stock</label>
-        <input type = "number" id = "itemsInStock">
-  
-        <button type = "submit" id = "submitBtn">Submit</button>
-      </form>
-    </div>
-    <form id="itemList-form">
-        <ul id="itemList"></ul>
-    </form>
-
-
-    <script>
-      // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyBliJ3qXi3KNfG2i6r1bSWI1wDPGnXtJFc",
-        authDomain: "ucmroboticsfoodrobot.firebaseapp.com",
-        databaseURL: "https://ucmroboticsfoodrobot.firebaseio.com",
-        projectId: "ucmroboticsfoodrobot",
-        storageBucket: "ucmroboticsfoodrobot.appspot.com",
-        messagingSenderId: "503157735593",
-        appId: "1:503157735593:web:0161305286f5636114e9b8",
-        measurementId: "G-1SHQ20SNTN"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-      const db = firebase.firestore();
-      db.settings({ timestampsInSnapshots: true });
-      
-    </script>
-
-    <script src="../../BackEnd/updateStock.js"></script>
-  </body>
-</html>
+        <script src="../../BackEnd/updateStock.js"></script>
+    
+    </body>
+    
+    
+    
+    
+    
+    
+    
+    </html>
