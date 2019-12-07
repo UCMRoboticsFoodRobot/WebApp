@@ -35,11 +35,13 @@ if(userpasswordSignUp === userpasswordConfirmSignUp){
       
      })
   .catch((error)=> {
+    alert(error.message)
       console.log(error.code);
       console.log(error.message);
     });
 }
 else{
+    alert("Passwords didnt match")
     console.log("passwords didnt match")
 }
 });
