@@ -119,6 +119,3 @@ function renderOrder(doc){
     }) 
   })
       
-      
-  
-  

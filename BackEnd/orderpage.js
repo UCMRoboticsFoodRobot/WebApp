@@ -38,4 +38,3 @@ db.collection('OrderSummary').get().then((snapshot) => {
 
   }) 
 })
-
