@@ -6,18 +6,42 @@
     <head>
             <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
 
-            <!--imports firestore-->
-            <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-firestore.js"></script>
-             
-    
-    
-        <title>Update Stock</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">  
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto|Staatliches&display=swap" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      <nav class="navbar">
+          <span class="open-slide">
+            <a href="#" onclick="openSlideMenu()">
+              <svg width="30" height="30">
+                  <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
+                  <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
+                  <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+              </svg>
+            </a>
+          </span>
+      
+          <ul class="navbar-nav">
+              <li><a href="../../Frontend/MainPage/Mission Statement.html">Mission Statement</a></li>
+              <li><a href="../../Frontend/MainPage/FAQ.html">FAQ</a></li>
+              <li><a href="../../Frontend/MainPage/ContactUs.html">Contact Us</a></li>
+             </ul>
+        </nav>
+      
+        <div id="side-menu" class="side-nav">
+          <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+          <a href="../MainPage/main.html">Home</a>
+          <a href="../MainPage/Mission Statement.html">Mission Statement</a>
+          <a href="../MainPage/Account.html">Account</a>
+          <a href="../Order Confirmation Page/orderconfirmationpage.html">Order Confirmation</a>
+          <a href="../Order History and Tracking Page/Order History and Tracking Page (Bootstrap).html">Order History</a>
+          <a href="../Reciept Page/reciept.html">Reciept</a>
+          <a href="../Menu Page/menuPage.html">Menu Page</a>
+          <a href="../Sign-In Page/signIn.html">Sign In</a>
+          <a href="../Sign Out Page/Logout.html">Logout</a>
+          <a href="../UpdateStock/alterItem.html">UpdateStock</a>
+        </div>
+      
+        <script>
+          function openSlideMenu(){
+            document.getElementById('side-menu').style.width = '250px';
+          }
       
         <script src="https://kit.fontawesome.com/bf4ae995a2.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="style.css">
