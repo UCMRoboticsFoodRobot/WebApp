@@ -42,24 +42,22 @@ function renderItem(doc){
 
 }
 
-itemname = document.getElementById("itemName")
-itemprice = document.getElementById("itemPrice")
-itemStock = document.getElementById("itemsInStock")
+ItemName = document.getElementById("itemName")
+ItemPrice = document.getElementById("itemPrice")
+ItemStock = document.getElementById("itemsInStock")
 
-function updateStock(){
+function alterstock(){
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
     db.collection('Items').doc().set({
-      name: itemname.innerHTML,
-      price: itemprice.innerHTML,
-      quantity: itemStock.innerHTML,
-  })
-    itemname.innerHTML = '';
-    itemprice.innerHTML = '';
-    itemStock.innerHTML = '';
+      name: ItemName.value,
+      price: parseInt(ItemPrice.value),
+      quantity: parseInt(ItemStock.value),
 
   })
+  ItemName.value = '';
+  ItemPrice.value = '';
+  ItemStock.value = '';
+
 }
 
 
