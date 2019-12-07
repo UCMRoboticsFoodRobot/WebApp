@@ -8,6 +8,7 @@ body{
   background-color:#3b5998;
   overflow:hidden;
   height:63px;
+  margin-top: 0px;
 }
 
 .navbar a{
