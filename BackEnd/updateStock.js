@@ -1,6 +1,5 @@
-//st loginList = document.querySelector('#login-list')
-const form = document.querySelector('#itemUpdate-form');
-const form = document.querySelector('#itemList-form');
+const form = document.querySelector('#item-list')
+
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();

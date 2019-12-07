@@ -1,0 +1,116 @@
+<<!DOCTYPE html>
+<html>
+
+<head>
+        <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+  
+        <!--imports firestore-->
+        <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-firestore.js"></script>
+         
+
+
+    <title>Order History and Tracking</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Staatliches&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+    <script src="https://kit.fontawesome.com/bf4ae995a2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background: #dddddd; font-family: Roboto;">
+   
+        <nav class="navbar">
+                <span class="open-slide">
+                  <a href="#" onclick="openSlideMenu()">
+                    <svg width="30" height="30">
+                        <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
+                        <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
+                        <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+                    </svg>
+                  </a>
+                </span>
+            
+                <ul class="navbar-nav">
+                        <li><a href="../../Frontend/MainPage/Mission Statement.html">Mission Statement</a></li>
+                        <li><a href="../../Frontend/MainPage/FAQ.html">FAQ</a></li>
+                        <li><a href="../../Frontend/MainPage/ContactUs.html">Contact Us</a></li>
+                      </ul>
+              </nav>
+            
+              <div id="side-menu" class="side-nav">
+                <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+                <a href="../MainPage/main.html">Home</a>
+                <a href="../MainPage/Mission Statement.html">Mission Statement</a>
+                <a href="../MainPage/Account.html">Account</a>
+                <a href="../Order Confirmation Page/orderconfirmationpage.html">Order Confirmation</a>
+                <a href="../Order History and Tracking Page/Order History and Tracking Page (Bootstrap).html">Order History</a>
+                <a href="../Reciept Page/reciept.html">Reciept</a>
+                <a href="../Menu Page/menuPage.html">Menu Page</a>
+                <a href="../Sign-In Page/signIn.html">Sign In</a>
+                <a href="../Sign Out Page/Logout.html">Logout</a>
+                <a href="../UpdateStock/alterItem.html">UpdateStock</a>
+              </div>
+            
+              <script>
+                function openSlideMenu(){
+                  document.getElementById('side-menu').style.width = '250px';
+                }
+            
+                function closeSlideMenu(){
+                  document.getElementById('side-menu').style.width = '0';
+                }
+              </script>
+   
+   
+   
+   
+    <div class="container" >
+        <div class="navbar">
+            <div class="container-fluid text-center">
+                <h1 class="display-1" style="font-family: Staatliches; padding: 10px; font-weight: 700; font-size: 50px">
+                    Menu Page
+                </h1>
+            </div>
+        </div>
+        
+        
+        <div class="well well-sm" style="border-radius: 5px">
+            <h2 class="display-2" style="font-family: Staatliches; font-weight: 700; margin-top: 5px">
+                Availible Items
+            </h2>
+
+            <div class="dropdown"> 
+                    <button class="btn btn-default dropdown-toggle" type="button" id="sortBy" data-toggle="dropdown" style="margin-top: 10px; margin-bottom: 10px">Sort By
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="sortBy">
+                        <li role="presentation"><a role="menuitem" tabindex="-1">Alphabetical</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1">Price: Low</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1">Price: High</a></li>
+                    </ul>   
+                </div>    
+            
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <th>ITEM</th>
+                        <th>PRICE</th>
+                    </thead>
+                    <tbody id = "item-list">
+
+                    </tbody>
+                    
+                </table>
+            </div>
+            
+        </div>
+
+    </div>
+    <script src="../../BackEnd/ItemPage.js"></script>
+
+</body>
+</html>
+

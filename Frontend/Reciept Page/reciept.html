@@ -2,7 +2,10 @@
 <html>
     <head>
         <title>Order Confirmation</title>
+
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
     <body>
@@ -33,7 +36,7 @@
             <a href="../Order Confirmation Page/orderconfirmationpage.html">Order Confirmation</a>
             <a href="../Order History and Tracking Page/Order History and Tracking Page (Bootstrap).html">Order History</a>
             <a href="../Reciept Page/reciept.html">Reciept</a>
-            <a href="../Shop Page/shoppage.html">Shop Page</a>
+            <a href="../Menu Page/menuPage.html">Menu Page</a>
             <a href="../Sign-In Page/signIn.html">Sign In</a>
             <a href="../Sign Out Page/Logout.html">Logout</a>
             <a href="../UpdateStock/alterItem.html">UpdateStock</a>
@@ -50,17 +53,21 @@
           </script>
 
 
-
-        <h1>Thank you for your order!</h1>
+        <div class="panel panel-default border col-md-offset-4 col-md-4 shadow">
+        <div class="panel-header"><center><h2>Thank you for your order!</h2></center></div>
         <hr />
+        <div class="panel-body">
 
-        <h2 id ="eta">ETA = </h2>
-        <h2 id="location">Delivery Location = </h2>
-        <h2>Order Summary</h2>
-        <!--Cart Details here (should be the same as the orderpage-->
-        <h3 id = "totalVal">Total: $ </h3>
-
-        <img src = "logo.png" alt = "Unable to load logo.">
+          <h3 id ="eta" class="col-md-8">ETA = </h3>
+          <h3 id="location" class="col-md-8">Delivery Location = </h3>
+          <h3 class="col-md-8">Order Summary</h3>
+          <!--Cart Details here (should be the same as the orderpage-->
+          <h3 id = "totalVal" class="col-md-8">Total: $ </h3>
+          <center>
+          <img src = "logo.png" width="alt = "Unable to load logo." class="img-responsive">
+          </center> 
+        </div>
+        </div>
 
         <!--Firebase-->
         <script>
