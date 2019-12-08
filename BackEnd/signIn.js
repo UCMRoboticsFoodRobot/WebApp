@@ -1,7 +1,7 @@
 
  // Your web app's Firebase configuration
  var firebaseConfig = {
-  apiKey: "",
+  apiKey: "AIzaSyA-p1zXRhGmSsA8ePtZO8Qbb3KVaUNh7TY",
   authDomain: "ucmroboticsfoodrobot.firebaseapp.com",
   databaseURL: "https://ucmroboticsfoodrobot.firebaseio.com",
   projectId: "ucmroboticsfoodrobot",
@@ -42,19 +42,12 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
    console.log('Signed In');
-   location.replace("../Frontend/MainPage/main.html") //This need to be fixed to the actual https url later on.. 
+   location.replace("../../Frontend/MainPage/main.html") //This need to be fixed to the actual https url later on.. 
     // ...
   } 
-  else {
-        // User is signed out.
-    console.log('Signed out'); 
-    alert("Signed out");
+  else{
+    console.log("signed out");
   }
 });
 
 
-
-function signOut(){
-  firebase.auth().signOut();
-
-}
