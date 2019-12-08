@@ -42,7 +42,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
    console.log('Signed In');
-   location.replace("http://127.0.0.1:5500/Frontend/MainPage/main.html") //This need to be fixed to the actual https url later on.. 
+   location.replace("../Frontend/MainPage/main.html") //This need to be fixed to the actual https url later on.. 
     // ...
   } 
   else {
@@ -55,6 +55,6 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 
 function signOut(){
-firebase.auth().signOut();
+  firebase.auth().signOut();
 
 }
