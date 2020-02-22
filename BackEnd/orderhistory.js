@@ -56,6 +56,7 @@ function renderOrder(doc){
 
         }
     }
+
     else{
       myMap = doc.data().Items;
       
@@ -88,12 +89,6 @@ function renderOrder(doc){
 
         }
     }
-
-   
-      
-    
-    
-    
   }
   
   function editOrder(){
@@ -111,11 +106,22 @@ function renderOrder(doc){
       
   }
 
-  db.collection('OrderSummary').get().then((snapshot) => {
-    snapshot.docs.forEach(doc => {
-      renderOrder(doc);
-      
+//auth status change listener
+  auth.onAuthStateChanged(user => {
+    if(user != null){
+      db.collection('OrderSummary').get().then((snapshot) => {
+        snapshot.docs.forEach(doc => {
+          
+          renderOrder(doc);
+    
+        }) 
+      })
+    }
+    else{
+      location.replace("../../Frontend/Sign-In Page/singIn.html")
+    }
 
-    }) 
   })
+
+  
       
