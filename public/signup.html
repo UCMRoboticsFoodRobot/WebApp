@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+        <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-auth.js"></script>
+
+    <head>
+        <title>Sign Up</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="signupstyles.css">
+        
+    </head>
+    <body>
+
+            <div class = "container-fluid signUpForm">
+            <center>
+                    <h2> Sign Up </h2>
+                    <form id = "signUp-form" class = "form-horizontal">
+
+                      <div class = "input-box row">
+                          <i class="fas fa-user" aria-hidden="true"></i>
+                          <label>Email:</label>
+                           <input type = "email" class = "form-control" name = "" placeholder = "Username" id = "userEmailSignUp" required = ""></inputtype>
+                      </div>
+
+            
+                      <div class = "input-box row">
+                          <i class="fas fa-user" aria-hidden="true"></i>
+                          <input type = "submit" class = "btn btn-default" name = ""  id = "signUpBtn">
+                      </div>
+                </form>
+            </center>
+            </div>
+        <script src="config.js"></script>
+        <script src="signup.js"></script>  
+        
+    </body>
+</html>
