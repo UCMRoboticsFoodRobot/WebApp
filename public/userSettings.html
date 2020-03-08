@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+    <html>
+        <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-auth.js"></script>
+
+        <head>
+            <title> User Settings</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">  
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+            <link href="https://fonts.googleapis.com/css?family=Roboto|Staatliches&display=swap" rel="stylesheet">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+            <script src="https://kit.fontawesome.com/bf4ae995a2.js" crossorigin="anonymous"></script>
+            <link rel="stylesheet" href="style.css">
+
+        </head>
+
+        <body style="background: #dddddd; font-family: Roboto; padding: 0px; margin: 0px">
+            <div class ="container">
+                <div class = "">
+                    <h1 class="display-1" style="font-family: Staatliches; padding: 10px; font-weight: 700; font-size: 50px">
+                    <center> User Settings</center>
+                    </h1>
+                </div>
+                </div>
+                <div class="well well-sm" style="border-radius: 5px">
+                    <h2 class="display-2" style="font-family: Staatliches; font-weight: 700; margin-top: 5px">
+                        <center>Enter Your Billing Information</center>
+                    </h2>
+                <br>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <th>Cardholder Name</th>
+                            <br>
+                            <th>Card Number</th>
+                            <br>
+                            <th>Cardholder Address</th>
+                            <th>CVV</th>
+                            <th>Expiration Date</th>
+                            <th>Zip Code</th>
+                        </thead>
+                        <tbody id = "update-table">
+                            <td><input type = "text" id = "Cardholder Name" ></td>
+                            <td><input type = "text" id = "Card Number" ></td>
+                            <td><input type = "text" id = "Cardholder Address" ></td>
+                            <td><input type = "text" id = "CVV" ></td>
+                            <td><input type = "text" id = "Expiration Date" ></td>
+                            <td><input type = "text" id = "Zip Code" ></td>
+                        </tbody>
+                        
+                    </table>
+                </div>
+                <div class="content">
+                    <center><button class="btn btn-success" style="font-size: 16px; margin-right: 30px; margin-bottom: 10px; padding: 10px" onclick="alterstock()">Submit Information</button></center>
+                  </div>
+    
+                  </form>
+    </html>
