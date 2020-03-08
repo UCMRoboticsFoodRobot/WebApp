@@ -3,10 +3,10 @@
 <html>
   <head>
     <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
-  
+
      <!--imports firestore-->
      <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-firestore.js"></script>
-      
+
     <title> Your Order </title>
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
@@ -55,13 +55,9 @@
     }
   </script>
 
-
-
-
-
     <h1 style = "text-align: center;">Order Details</h1>
 
-    <h2>Your Cart</h2>
+    <h1>Thank You!</h1>
     <hr />
 
     <h2>Order Summary</h2>
@@ -70,24 +66,12 @@
     <br><br><strong id="subtotalVal">Subtotal: $ </strong><br><br>
 
     <strong id="taxesVal">Taxes: </strong><strong> %</strong><br><br>
-    
+
     <strong id="transportVal">Transport Fee: $ </strong><br><br>
-    
+
     <strong id="totalVal">Total: $ </strong><br><br>
 
-    <h2>Payment Method</h2>
-    <hr />
-
-    <br>
-
-    <button id = "venmo">Venmo</button>
-
-    <button id = "paypal">PayPal</button>
-
-    <br><br><br><button id = "placeOrder">Place Order</button>
-
-
-
+    <p><i>Please check your email for your QR code!</i></p>
     <!--Calls on the respective js file-->
     <script src="../../BackEnd/orderpage.js"></script>
 
