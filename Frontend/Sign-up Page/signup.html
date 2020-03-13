@@ -1,50 +1,72 @@
 <!DOCTYPE html>
-<html>
-        <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-firestore.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-auth.js"></script>
+<html lang="en" dir="ltr" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
 
-    <head>
-        <title>Sign Up</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="signupstyles.css">
-        
-    </head>
-    <body>
+  </head>
+  <body class="signUpBody h-100">
 
-            <div class = "container-fluid signUpForm">
-            <center>
-                    <h2> Sign Up </h2>
-                    <form id = "signUp-form" class = "form-horizontal">
 
-                      <div class = "input-box row">
-                          <i class="fas fa-user" aria-hidden="true"></i>
-                          <label>Email:</label>
-                           <input type = "email" class = "form-control" name = "" placeholder = "Username" id = "userEmailSignUp" required = ""></inputtype>
-                      </div>
+    <!--Alt div tags for the container to be vertically centered on page too
+    <div class="h-100 bg-dark row">
+     <div class="container d-flex align-items-center">
+       <div class="mx-auto border shadow col-md-6">
+   -->
 
-                      <div class = "input-box row">
-                          <i class="fas fa-user" aria-hidden="true"></i>
-                          <label>Password:</label>
-                          <input type = "password" class = "form-control" name = "" placeholder = "Password" id = "userPasswordSignUp" required = ""></inputtype>
-                      </div> 
-                      
-                      <div class = "input-box row">
-                            <i class="fas fa-user" aria-hidden="true"></i>
-                            <label class="control-label">Confirm Password:</label>
-                            <input type = "password" class = "form-control" name = "" placeholder = "Confirm Password" id = "userPasswordConfirmSignUp" required = ""></inputtype> 
-                      </div>
-            
-                      <div class = "input-box row">
-                          <i class="fas fa-user" aria-hidden="true"></i>
-                          <input type = "submit" class = "btn btn-default" name = ""  id = "signUpBtn">
-                      </div>
-                </form>
-            </center>
+  <div class="h-100 pt-5">
+   <div class="container align-middle">
+     <div class="mx-auto border rounded border-dark shadow bg-light col-md-6">
+
+       <div class="pt-3 text-center">
+         <button class="btn btn-outline-secondary d-flex">Back</button>
+         <h1 class="mx-auto">Sign Up</h1>
+       </div>
+
+        <form id="signIn-form" class="p-3">
+          <div class="form-group col-md-6 mx-auto">
+            <label for="userEmailSignIn">Email Address: </label>
+            <input type="email" name="" id="userEmailSignUp" class="form-control ">
+          </div>
+
+          <div class="form-group col-md-6 mx-auto">
+            <label for="userPasswordSignIn">Password: </label>
+            <input type="email" name="" id="userPasswordSignUp" class="form-control ">
+          </div>
+
+          <div class="form-group col-md-6 mx-auto">
+            <label for="userPasswordSignIn">Confirm Password: </label>
+            <input type="email" name="" id="userPasswordConfirmSignUp" class="form-control ">
+          </div>
+
+          <div class="form-group col-md-6 mx-auto mt-4">
+            <button type="submit" class="btn btn-primary form-control">Sign Up!</button>
+          </div>
+
+          <div class="form-group col-8 mx-auto">
+            <button type="submit" class="btn btn-ghost-dark form-control">Login Instead</button>
+          </div>
+
+          <!--
+          <div class="form-row w-75 mx-auto">
+            <div class="col">
+              <button type="submit" class="btn btn-primary form-control">Login</button>
             </div>
-    </body>
-</html>
+            <div class="col">
+              <button type="submit" class="btn btn-ghost-dark form-control">Create an account.</button>
+            </div>
+          </div>
+        -->
+        </form>
+     </div>
+   </div>
+  </div>
 
-<script src="../../BackEnd/signUp.js"></script>   
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
