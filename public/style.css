@@ -1,0 +1,14 @@
+/*Change these gradients later after we've established a color scheme */
+.signUpBody {
+  background: rgb(255,231,94);
+  background: -webkit-linear-gradient(rgba(255,231,94,1) 13%, rgba(254,183,43,1) 59%);
+  background: -o-linear-gradient(rgba(255,231,94,1) 13%, rgba(254,183,43,1) 59%);
+  background: linear-gradient(rgba(255,231,94,1) 13%, rgba(254,183,43,1) 59%);
+}
+
+.signInBody {
+  background: rgb(187,225,250);
+  background: -webkit-linear-gradient(rgba(187,225,250,1) 0%, rgba(50,130,184,1) 36%, rgba(15,76,117,1) 91%);
+  background: -o-linear-gradient(rgba(187,225,250,1) 0%, rgba(50,130,184,1) 36%, rgba(15,76,117,1) 91%);
+  background: linear-gradient(rgba(187,225,250,1) 0%, rgba(50,130,184,1) 36%, rgba(15,76,117,1) 91%);
+}
