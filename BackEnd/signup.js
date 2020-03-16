@@ -11,12 +11,12 @@ var actionCodeSettings = {
 var form = document.querySelector("form")
 
 
-form.addEventListener('submit',  (e)=>{
+form.addEventListener('submit', (e)=>{
   e.preventDefault();
   console.log("clicked");
   
-  var email = document.getElementById("email").value
-  var psswd = document.getElementById("password").value
+  var email = document.getElementById("userEmailSignUp").value
+  var psswd = document.getElementById("userPasswordSignUp").value
 
   //creaste the user
   firebase.auth().createUserWithEmailAndPassword(email, psswd)
@@ -41,8 +41,6 @@ form.addEventListener('submit',  (e)=>{
       // Some error occurred, you can inspect the code: error.code
       console.log(error.message)
     });
-
-
   
 })
 
