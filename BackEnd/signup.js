@@ -29,6 +29,15 @@ form.addEventListener('submit', (e)=>{
       //send a verification email to user and then alert the window
       user.sendEmailVerification().then(function(){
         window.alert("verification sent");
+        var user = firebase.auth().currentUser;
+        db.collection('User').doc().set({
+            UID: user.uid,
+            role: "customer",
+            email: user.email
+
+        
+          })
+        
     
       }).catch(function(error) {
     
